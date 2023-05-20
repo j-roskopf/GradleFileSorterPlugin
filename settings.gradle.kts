@@ -1,1 +1,1 @@
-rootProject.name = "GradleFileSorterPlugin"
+rootProject.name = "GradleFileSorter"

@@ -1,18 +1,28 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.jroskopf.gradlefilesorterplugin</id>
-    <name>GradleFileSorterPlugin Template</name>
-    <vendor>j-roskopf</vendor>
+    <id>com.joetr.gradlefilesorter</id>
+    <name>Gradle File Sorter</name>
+    <vendor email="joseph.thomas.roskopf@gmail.com.com" url="https://joetr.com/">https://joetr.com</vendor>
 
-    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
+    <description>Sorts the dependencies within Gradle files for an Android app</description>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.jroskopf.gradlefilesorterplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-    </extensions>
+    <actions>
+        <action
+                id="GradleFileSorter.PopupMenu"
+                class="com.joetr.gradlefileformatter.GradleFileFormatterPopupMenuAction"
+                text="Format Gradle File"
+                description="Format gradle file">
+            <add-to-group group-id="EditorLangPopupMenu"/>
+        </action>
 
-    <applicationListeners>
-        <listener class="com.github.jroskopf.gradlefilesorterplugin.listeners.MyFrameStateListener" topic="com.intellij.ide.FrameStateListener"/>
-    </applicationListeners>
+        <action
+                id="GradleFileSorter.ToolsMenu"
+                class="com.joetr.gradlefileformatter.GradleFileFormatterToolsAction"
+                text="Format All Gradle Files"
+                description="Format all gradle files">
+            <add-to-group group-id="ToolsMenu"/>
+        </action>
+    </actions>
 </idea-plugin>

@@ -1,7 +1,4 @@
-<!-- Keep a Changelog guide -> https://keepachangelog.com -->
+# Gradle File Sorter Changelog
 
-# GradleFileSorterPlugin Changelog
-
-## [Unreleased]
-### Added
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+## [1.0.0]
+- Initial release
