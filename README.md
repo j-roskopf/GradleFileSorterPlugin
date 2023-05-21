@@ -1,6 +1,6 @@
 # Gradle File Sorter Plugin
 
-[![Build](https://github.com/j-roskopf/GradleFileSorterPlugin/actions/workflows/gradle.yml/badge.svg)](https://github.com/j-roskopf/GradleFileSorterPlugin/actions/workflows/gradle.yml)
+[![Build](https://github.com/j-roskopf/GradleFileSorterPlugin/actions/workflows/gradle.yml/badge.svg)](https://github.com/j-roskopf/GradleFileSorterPlugin/actions/workflows/release.yml)
 [![Version](https://img.shields.io/jetbrains/plugin/v/21846.svg)](https://plugins.jetbrains.com/plugin/21846)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/21846.svg)](https://plugins.jetbrains.com/plugin/21846)
 
