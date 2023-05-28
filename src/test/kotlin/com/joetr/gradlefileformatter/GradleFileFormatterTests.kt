@@ -55,4 +55,36 @@ class GradleFileFormatterTests {
             }
         )
     }
+
+    @Test
+    fun `file formatted correctly with variables at the top in gradle file`() {
+        sorter.reorgGradleFile(
+            Inputs.QKSMS_APP_GRADLE_FILE_WITH_VARIABLE,
+            onComplete = {
+                assertEquals(
+                    Outputs.QKSMS_APP_GRADLE_FILE_WITH_VARIABLE,
+                    it
+                )
+            },
+            onError = {
+                fail("Should not have errors")
+            }
+        )
+    }
+
+    @Test
+    fun `file formatted correctly with variables at the top in gradle kts file`() {
+        sorter.reorgGradleFile(
+            Inputs.NOW_IN_ANDROID_APP_GRADLE_KTS_WITH_VARIABLE,
+            onComplete = {
+                assertEquals(
+                    Outputs.NOW_IN_ANDROID_APP_GRADLE_KTS_WITH_VARIABLE,
+                    it
+                )
+            },
+            onError = {
+                fail("Should not have errors")
+            }
+        )
+    }
 }

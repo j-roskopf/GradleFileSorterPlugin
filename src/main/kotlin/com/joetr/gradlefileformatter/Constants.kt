@@ -1,7 +1,10 @@
 package com.joetr.gradlefileformatter
 
 object Constants {
+
     val moduleTypesKts = listOf(
+        "val ",
+
         "coreLibraryDesugaring(project",
         "coreLibraryDesugaring(projects",
         "coreLibraryDesugaring(platform",
@@ -110,6 +113,8 @@ object Constants {
     )
 
     val moduleTypesGroovy = listOf(
+        "def ",
+
         "coreLibraryDesugaring project",
         "coreLibraryDesugaring projects",
         "coreLibraryDesugaring platform",
