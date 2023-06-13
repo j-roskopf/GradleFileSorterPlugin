@@ -11,8 +11,6 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.vfs.VirtualFile
 import org.jetbrains.annotations.NotNull
 
-// TODO fill out readme
-
 class GradleFileFormatterPopupMenuAction : AnAction() {
 
     private val sorter = Sorter()

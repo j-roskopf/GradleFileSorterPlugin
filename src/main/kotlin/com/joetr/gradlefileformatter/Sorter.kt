@@ -141,13 +141,13 @@ class Sorter {
 
     private fun dependencyBlockItemStart(item: String): String {
         var moduleTypeToReturn = ""
-        Constants.moduleTypesKts.forEach { moduleType ->
+        moduleTypesKts.forEach { moduleType ->
             if (item.trim().startsWith(moduleType)) {
                 moduleTypeToReturn = moduleType
             }
         }
 
-        Constants.moduleTypesGroovy.forEach { moduleType ->
+        moduleTypesGroovy.forEach { moduleType ->
             if (item.trim().startsWith(moduleType)) {
                 moduleTypeToReturn = moduleType
             }
