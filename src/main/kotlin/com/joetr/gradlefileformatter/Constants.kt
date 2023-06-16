@@ -29,6 +29,12 @@ object Constants {
         "compileOnly('",
         "compileOnly(\"",
 
+        "ksp(project",
+        "ksp(projects",
+        "ksp(libs",
+        "ksp('",
+        "ksp(\"",
+
         "implementation(project",
         "implementation(projects",
         "implementation(platform",
@@ -36,12 +42,6 @@ object Constants {
         "implementation(libs",
         "implementation('",
         "implementation(\"",
-
-        "ksp(project",
-        "ksp(projects",
-        "ksp(libs",
-        "ksp('",
-        "ksp(\"",
 
         "kapt(project",
         "kapt(projects",
@@ -166,6 +166,12 @@ object Constants {
         "compileOnly '",
         "compileOnly \"",
 
+        "ksp project",
+        "ksp projects",
+        "ksp libs",
+        "ksp '",
+        "ksp \"",
+
         "implementation project",
         "implementation projects",
         "implementation platform",
@@ -173,12 +179,6 @@ object Constants {
         "implementation libs",
         "implementation '",
         "implementation \"",
-
-        "ksp project",
-        "ksp projects",
-        "ksp libs",
-        "ksp '",
-        "ksp \"",
 
         "kapt project",
         "kapt projects",

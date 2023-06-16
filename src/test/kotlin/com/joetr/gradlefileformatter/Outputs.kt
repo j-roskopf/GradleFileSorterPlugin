@@ -308,6 +308,8 @@ object Outputs {
         }
 
         dependencies {
+            ksp(libs.kotlininject.compiler)
+
             implementation(projects.api.tmdb)
             implementation(projects.api.trakt)
             implementation(projects.common.imageloading)
@@ -355,8 +357,6 @@ object Outputs {
             implementation(libs.kotlin.coroutines.android)
             implementation(libs.okhttp.loggingInterceptor)
             implementation(libs.timber)
-
-            ksp(libs.kotlininject.compiler)
 
             lintChecks(libs.slack.lint.compose)
 
