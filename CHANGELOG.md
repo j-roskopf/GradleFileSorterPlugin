@@ -1,5 +1,8 @@
 # Gradle File Sorter Changelog
 
+## [1.0.3]
+- Fixes for ksp entries
+
 ## [1.0.2]
 - Added support for testFixtures
 
