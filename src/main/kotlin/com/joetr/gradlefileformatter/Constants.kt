@@ -43,6 +43,14 @@ object Constants {
         "implementation('",
         "implementation(\"",
 
+        "anvil(project",
+        "anvil(projects",
+        "anvil(platform",
+        "anvil(kotlin",
+        "anvil(libs",
+        "anvil('",
+        "anvil(\"",
+
         "kapt(project",
         "kapt(projects",
         "kapt(libs",
@@ -179,6 +187,14 @@ object Constants {
         "implementation libs",
         "implementation '",
         "implementation \"",
+
+        "anvil project",
+        "anvil projects",
+        "anvil platform",
+        "anvil kotlin",
+        "anvil libs",
+        "anvil '",
+        "anvil \"",
 
         "kapt project",
         "kapt projects",
