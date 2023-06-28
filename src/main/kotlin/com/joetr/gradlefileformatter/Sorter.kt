@@ -76,9 +76,11 @@ class Sorter {
         var index = start
 
         var firstItemStart = dependencyBlockItemStart(moduleBlock[0]).trim()
-        var i = 0
-        while (i < moduleBlock.size) {
+
+        while (true) {
             val item = toReturn[index]
+            if (item.trim() == "}") break
+
             val currentItemStart = dependencyBlockItemStart(item).trim()
             if (currentItemStart != firstItemStart && currentItemStart != "") {
                 toReturn.add(index, "")
@@ -86,7 +88,6 @@ class Sorter {
             }
 
             index++
-            i++
         }
 
         return toReturn
