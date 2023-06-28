@@ -1,5 +1,8 @@
 # Gradle File Sorter Changelog
 
+## [1.0.5]
+- Add Anvil support
+
 ## [1.0.4]
 - Bug fixes around sorting the last entries in the dependencies block
 
