@@ -19,7 +19,7 @@ object Outputs {
          * limitations under the License.
          */
         import com.google.samples.apps.nowinandroid.NiaBuildType
-
+        
         plugins {
             id("nowinandroid.android.application")
             id("nowinandroid.android.application.compose")
@@ -30,20 +30,20 @@ object Outputs {
             id("nowinandroid.android.application.firebase")
             id("com.google.android.gms.oss-licenses-plugin")
         }
-
+        
         android {
             defaultConfig {
                 applicationId = "com.google.samples.apps.nowinandroid"
                 versionCode = 5
                 versionName = "0.0.5" // X.Y.Z; X = Major, Y = minor, Z = Patch level
-
+        
                 // Custom test runner to set up Hilt dependency graph
                 testInstrumentationRunner = "com.google.samples.apps.nowinandroid.core.testing.NiaTestRunner"
                 vectorDrawables {
                     useSupportLibrary = true
                 }
             }
-
+        
             buildTypes {
                 debug {
                     applicationIdSuffix = NiaBuildType.DEBUG.applicationIdSuffix
@@ -52,7 +52,7 @@ object Outputs {
                     isMinifyEnabled = true
                     applicationIdSuffix = NiaBuildType.RELEASE.applicationIdSuffix
                     proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-
+        
                     // To publish on the Play store a private signing key is required, but to allow anyone
                     // who clones the code to sign and run the release variant, use the debug signing key.
                     // TODO: Abstract the signing configuration to a separate file to avoid hardcoding this.
@@ -70,7 +70,7 @@ object Outputs {
                     applicationIdSuffix = NiaBuildType.BENCHMARK.applicationIdSuffix
                 }
             }
-
+        
             packaging {
                 resources {
                     excludes.add("/META-INF/{AL2.0,LGPL2.1}")
@@ -83,7 +83,7 @@ object Outputs {
             }
             namespace = "com.google.samples.apps.nowinandroid"
         }
-
+        
         dependencies {
             implementation(project(":core:analytics"))
             implementation(project(":core:common"))
@@ -98,7 +98,7 @@ object Outputs {
             implementation(project(":feature:settings"))
             implementation(project(":feature:topic"))
             implementation(project(":sync:work"))
-
+        
             implementation(libs.accompanist.systemuicontroller)
             implementation(libs.androidx.activity.compose)
             implementation(libs.androidx.appcompat)
@@ -113,20 +113,22 @@ object Outputs {
             implementation(libs.androidx.profileinstaller)
             implementation(libs.androidx.window.manager)
             implementation(libs.coil.kt)
-
+        
             debugImplementation(project(":ui-test-hilt-manifest"))
-
+        
             debugImplementation(libs.androidx.compose.ui.testManifest)
-
+        
             androidTestImplementation(project(":core:data-test"))
             androidTestImplementation(project(":core:datastore-test"))
             androidTestImplementation(project(":core:network"))
             androidTestImplementation(project(":core:testing"))
+        
             androidTestImplementation(kotlin("test"))
+        
             androidTestImplementation(libs.accompanist.testharness)
             androidTestImplementation(libs.androidx.navigation.testing)
         }
-
+        
         // androidx.test is forcing JUnit, 4.12. This forces it to use 4.13
         configurations.configureEach {
             resolutionStrategy {
@@ -785,7 +787,7 @@ object Outputs {
          * limitations under the License.
          */
         import com.google.samples.apps.nowinandroid.NiaBuildType
-
+        
         plugins {
             id("nowinandroid.android.application")
             id("nowinandroid.android.application.compose")
@@ -796,20 +798,20 @@ object Outputs {
             id("nowinandroid.android.application.firebase")
             id("com.google.android.gms.oss-licenses-plugin")
         }
-
+        
         android {
             defaultConfig {
                 applicationId = "com.google.samples.apps.nowinandroid"
                 versionCode = 5
                 versionName = "0.0.5" // X.Y.Z; X = Major, Y = minor, Z = Patch level
-
+        
                 // Custom test runner to set up Hilt dependency graph
                 testInstrumentationRunner = "com.google.samples.apps.nowinandroid.core.testing.NiaTestRunner"
                 vectorDrawables {
                     useSupportLibrary = true
                 }
             }
-
+        
             buildTypes {
                 debug {
                     applicationIdSuffix = NiaBuildType.DEBUG.applicationIdSuffix
@@ -818,7 +820,7 @@ object Outputs {
                     isMinifyEnabled = true
                     applicationIdSuffix = NiaBuildType.RELEASE.applicationIdSuffix
                     proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-
+        
                     // To publish on the Play store a private signing key is required, but to allow anyone
                     // who clones the code to sign and run the release variant, use the debug signing key.
                     // TODO: Abstract the signing configuration to a separate file to avoid hardcoding this.
@@ -836,7 +838,7 @@ object Outputs {
                     applicationIdSuffix = NiaBuildType.BENCHMARK.applicationIdSuffix
                 }
             }
-
+        
             packaging {
                 resources {
                     excludes.add("/META-INF/{AL2.0,LGPL2.1}")
@@ -849,10 +851,10 @@ object Outputs {
             }
             namespace = "com.google.samples.apps.nowinandroid"
         }
-
+        
         dependencies {
             val glideVersion = "4.8.0"
-
+        
             implementation(project(":core:analytics"))
             implementation(project(":core:common"))
             implementation(project(":core:data"))
@@ -866,7 +868,7 @@ object Outputs {
             implementation(project(":feature:settings"))
             implementation(project(":feature:topic"))
             implementation(project(":sync:work"))
-
+        
             implementation(libs.accompanist.systemuicontroller)
             implementation(libs.androidx.activity.compose)
             implementation(libs.androidx.appcompat)
@@ -881,24 +883,26 @@ object Outputs {
             implementation(libs.androidx.profileinstaller)
             implementation(libs.androidx.window.manager)
             implementation(libs.coil.kt)
-
+        
             implementation "com.github.bumptech.glide:glide:${'$'}glideVersion"
-
+        
             kapt "com.github.bumptech.glide:compiler:${'$'}glideVersion"
-
+        
             debugImplementation(project(":ui-test-hilt-manifest"))
-
+        
             debugImplementation(libs.androidx.compose.ui.testManifest)
-
+        
             androidTestImplementation(project(":core:data-test"))
             androidTestImplementation(project(":core:datastore-test"))
             androidTestImplementation(project(":core:network"))
             androidTestImplementation(project(":core:testing"))
+        
             androidTestImplementation(kotlin("test"))
+        
             androidTestImplementation(libs.accompanist.testharness)
             androidTestImplementation(libs.androidx.navigation.testing)
         }
-
+        
         // androidx.test is forcing JUnit, 4.12. This forces it to use 4.13
         configurations.configureEach {
             resolutionStrategy {
