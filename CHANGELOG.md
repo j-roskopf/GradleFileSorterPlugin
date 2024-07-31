@@ -1,5 +1,8 @@
 # Gradle File Sorter Changelog
 
+## [1.0.8]
+- Don't specify pluginUntilBuild. This plugin will work forever ;)
+
 ## [1.0.7]
 - Support new intellij platform versions
 
