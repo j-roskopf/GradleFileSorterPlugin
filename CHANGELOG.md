@@ -1,5 +1,8 @@
 # Gradle File Sorter Changelog
 
+## [1.0.7]
+- Support new intellij platform versions
+
 ## [1.0.6]
 - Support new intellij platform versions
 - Update to Kotlin 1.9
