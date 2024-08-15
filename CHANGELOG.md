@@ -1,5 +1,8 @@
 # Gradle File Sorter Changelog
 
+## [1.0.9]
+- Fix sort all from tools menu
+
 ## [1.0.8]
 - Don't specify pluginUntilBuild. This plugin will work forever ;)
 
