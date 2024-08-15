@@ -15,7 +15,6 @@ class Sorter {
         var moduleBlockData = getLocationOfDependenciesBlock(lines)
 
         if (moduleBlockData.startPosition == -1 || moduleBlockData.endPosition == -1) {
-            onError(SorterError.NoDependenciesBlock)
             return
         }
 

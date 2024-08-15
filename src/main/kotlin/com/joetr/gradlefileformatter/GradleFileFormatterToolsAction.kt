@@ -4,11 +4,11 @@ import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
+import com.intellij.openapi.application.WriteAction
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.roots.ProjectRootManager
 import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.psi.PsiManager
-import java.util.*
 
 class GradleFileFormatterToolsAction : AnAction() {
 
@@ -31,9 +31,11 @@ class GradleFileFormatterToolsAction : AnAction() {
                         sorter.reorgGradleFile(
                             text = PsiManager.getInstance(project).findFile(file)?.text.orEmpty(),
                             onComplete = {
-                                val charset = file.charset
-                                file.getOutputStream(file).use { stream -> stream.write(it.toByteArray(charset)) }
-                                file.refresh(true, true)
+                                WriteAction.run<Throwable> {
+                                    val charset = file.charset
+                                    file.getOutputStream(file).use { stream -> stream.write(it.toByteArray(charset)) }
+                                    file.refresh(true, true)
+                                }
                             },
                             onError = {
                                 fileNamesForErrors.add(file.name)
