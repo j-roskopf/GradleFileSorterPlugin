@@ -33,7 +33,7 @@ class GradleFileFormatterPopupMenuAction : AnAction() {
     }
 
     override fun actionPerformed(event: AnActionEvent) {
-        val project: Project = event.getRequiredData(CommonDataKeys.PROJECT)
+        val project: Project = event.project ?: return
 
         val editor: Editor? = event.getData(CommonDataKeys.EDITOR)
         val document = editor?.document ?: return
