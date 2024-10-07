@@ -3,7 +3,6 @@ package com.joetr.gradlefileformatter
 import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
-import com.intellij.openapi.actionSystem.CommonDataKeys
 import com.intellij.openapi.application.WriteAction
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.roots.ProjectRootManager
@@ -19,7 +18,7 @@ class GradleFileFormatterToolsAction : AnAction() {
     }
 
     override fun actionPerformed(event: AnActionEvent) {
-        val project: Project = event.getRequiredData(CommonDataKeys.PROJECT)
+        val project: Project = event.project ?: return
 
         val fileNamesForErrors = mutableListOf<String>()
 
