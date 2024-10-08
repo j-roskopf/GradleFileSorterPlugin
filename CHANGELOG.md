@@ -1,5 +1,8 @@
 # Gradle File Sorter Changelog
 
+## [1.0.10]
+- Platform updates
+
 ## [1.0.9]
 - Fix sort all from tools menu
 
