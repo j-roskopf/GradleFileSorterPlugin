@@ -3,6 +3,7 @@
 [![Build](https://github.com/j-roskopf/GradleFileSorterPlugin/actions/workflows/release.yml/badge.svg)](https://github.com/j-roskopf/GradleFileSorterPlugin/actions/workflows/release.yml)
 [![Version](https://img.shields.io/jetbrains/plugin/v/21846.svg)](https://plugins.jetbrains.com/plugin/21846)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/21846.svg)](https://plugins.jetbrains.com/plugin/21846)
+[![Hits-of-Code](https://hitsofcode.com/github/j-roskopf/GradleFileSorterPlugin?branch=main)](https://hitsofcode.com/github/j-roskopf/GradleFileSorterPlugin/view?branch=main)
 
 <!-- Plugin description -->
 Sorts the dependencies block within Gradle files for an Android app
